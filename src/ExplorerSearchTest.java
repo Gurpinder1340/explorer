@@ -14,7 +14,19 @@ public class ExplorerSearchTest {
         int actual = ExplorerSearch.reachableArea(island);
         assertEquals(14, actual);
     }
+    
+@Test 
+public void testStart() {
+    int[][] island = {
+        {1, 1, 1},
+        {1, 0, 1},
+        {1, 1, 1},
+    };
 
-    // Add more tests here!
-    // Come up with varied cases
+    int[] start = ExplorerSearch.findStartingPosition(island);
+    assertArrayEquals(new int[]{1, 1}, start);
+     
+}
+
+ 
 }
