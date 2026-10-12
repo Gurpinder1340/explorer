@@ -29,9 +29,21 @@ public class ExplorerSearch {
      * @return the number of spaces the explorer can reach
      */
     public static int reachableArea(int[][] island) {
+        return 0;
         // Implement your method here!
         // Please also make more test cases
         // I STRONGLY RECOMMEND testing some helpers you might make too
-        return -1;
+    }    
+        public static int[] findStartingPosition(int[][] island) {
+            for (int row = 0; row < island.length; row++) {
+                for (int column = 0; column < island[row].length; column++) {
+                    if (island[row][column] == 0) {
+                        return new int[]{row, column};
+                    }
+                }
+            }
+            return null;
+        }
     }
-}
+    
+
